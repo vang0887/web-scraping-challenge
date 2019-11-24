@@ -104,10 +104,9 @@ def twitter_weather(browser):
     
     # Find a Tweet with the data-name `Mars Weather`
     mars_weather_tweet = weather_soup.find("div", 
-                                       attrs={
-                                           "class": "tweet", 
-                                            "data-name": "Mars Weather"
-                                        })
+                                            attrs={"class": 
+                                            "tweet", "data-name": "Mars Weather"})
+    
    # Search Within Tweet for <p> Tag Containing Tweet Text
     mars_weather = mars_weather_tweet.find("p", "tweet-text").get_text()
     return mars_weather
